@@ -60,8 +60,7 @@
                     <!--推送到私有仓库-->
                     <!-- <imageName>localhost:5000/fox/fox-eureka-server</imageName> -->
                     <!--本地-->
-                    <dockerHost
-                    >http://192.168.157.101:2375</dockerHost>
+                    <dockerHost>http://192.168.157.101:2375</dockerHost>
                     <imageName>test/demo</imageName>
                     <imageTags>
                         <imageTag>0.0.1</imageTag>
