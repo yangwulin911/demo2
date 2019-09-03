@@ -62,7 +62,7 @@
                     <!-- <imageName>localhost:5000/fox/fox-eureka-server</imageName> -->
                     <!--本地-->
                     <dockerHost>http://120.79.158.192:2376</dockerHost>
-                    <dockerCertPath>D:\ca</dockerCertPath>
+                    <dockerCertPath>/usr/local/ca</dockerCertPath>
                     <imageName>test/demo</imageName>
                     <imageTags>
                         <imageTag>0.0.2</imageTag>
@@ -73,8 +73,6 @@
                     <forceTags>true</forceTags>
                     <!--使用pom 配置-->
                     <baseImage>java</baseImage>
-                    <env>TZ=Asia/Shanghai</env>
-                    <runs>ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ > /etc/timezone</runs>
                     <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
                     <!--使用pom 配置 END-->
                     <!--使用 Dockerfile-->
