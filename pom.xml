@@ -61,19 +61,19 @@
                     <!--推送到私有仓库-->
                     <!-- <imageName>localhost:5000/fox/fox-eureka-server</imageName> -->
                     <!--本地-->
-                    <dockerHost>https://120.79.158.192:2376</dockerHost>
-                    <dockerCertPath>/usr/local/ca</dockerCertPath>
-                    <imageName>test/demo</imageName>
+<!--                    <dockerHost>https://120.79.158.192:2376</dockerHost>-->
+                    <dockerDirectory>${project.basedir}</dockerDirectory>
+                    <imageName>120.79.158.192/library/demo</imageName>
                     <imageTags>
-                        <imageTag>0.0.2</imageTag>
+                        <imageTag>0.0.3</imageTag>
                         <!--可以指定多个标签-->
                         <imageTag>latest</imageTag>
                     </imageTags>
                     <!--覆盖已存在的标签 镜像-->
                     <forceTags>true</forceTags>
                     <!--使用pom 配置-->
-                    <baseImage>java</baseImage>
-                    <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
+<!--                    <baseImage>java</baseImage>-->
+<!--                    <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>-->
                     <!--使用pom 配置 END-->
                     <!--使用 Dockerfile-->
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
@@ -85,6 +85,9 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
+                    <registryUrl>120.79.158.192</registryUrl>
+                    <serverId>120.79.158.192</serverId>
+                    <pushImage>true</pushImage>
                 </configuration>
             </plugin>
 
