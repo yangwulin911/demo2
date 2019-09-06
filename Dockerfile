@@ -1,4 +1,4 @@
-FROM openjdk
+FROM anapsix/alpine-java:8_server-jre_unlimited
 
 MAINTAINER yangwulin911@163.com
 
