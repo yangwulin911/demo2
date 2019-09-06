@@ -1,4 +1,4 @@
-FROM java
+FROM openjdk
 
 MAINTAINER yangwulin911@163.com
 
